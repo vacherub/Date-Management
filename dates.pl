@@ -51,22 +51,22 @@ my $display_country_name = code2country(lc($country_code)) || "Unknown Country (
 # Single help text with explicit ISO specifications
 my $help_text = <<EOF;
 Usage:
-  $0 -s|--start=YYYY-MM-DD [-e|--end=YYYY-MM-DD] [-c|--country=XX]
-  $0 -l|--list[=YYYY] [-c|--country=XX]
+  $0 -s|--start YYYY-MM-DD [-e|--end YYYY-MM-DD] [-c|--country XX]
+  $0 -l|--list [YYYY] [-c|--country XX]
   $0 -C|--list-countries
   $0 -h|--help
 
 Description: Calculate working days or list holidays using the Nager.at API.
 
 Parameters:
-  -s, --start=YYYY-MM-DD   Start date (required in Calculation Mode).
+  -s, --start YYYY-MM-DD   Start date (required in Calculation Mode).
                             Must follow ISO 8601 international date standard (e.g. 2026-01-01).
-  -e, --end=YYYY-MM-DD     End date. Optional (default: today).
+  -e, --end YYYY-MM-DD     End date. Optional (default: today).
                             Must follow ISO 8601 international date standard (e.g. 2026-06-08).
-  -c, --country=XX         Two-letter country code per ISO 3166-1 alpha-2.
+  -c, --country XX         Two-letter country code per ISO 3166-1 alpha-2.
                             Default: $country_code ($display_country_name).
-  -l, --list[=YYYY]        Year to list holidays for. Optional (default: current year).
-  -C, --list-countries    List all valid ISO 3166-1 alpha-2 country codes
+  -l, --list [YYYY]        Year to list holidays for. Optional (default: current year).
+  -C, --list-countries     List all valid ISO 3166-1 alpha-2 country codes
                             available in the API.
   -h, --help               Show this help.
 EOF
