@@ -84,7 +84,7 @@ if (($list_countries_flag && $start_str) || ($list_countries_flag && defined $li
 
 # --- User agent configuration ---
 my $ua = LWP::UserAgent->new(timeout => 15, env_proxy => 1, ssl_opts => { verify_hostname => 1 });
-$ua->agent("$0/1.1 (script)"); 
+$ua->agent("$0/1.0 (script)"); 
 $ua->default_header('Accept' => 'application/json'); 
 
 # =================================================================================
